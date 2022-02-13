@@ -1,0 +1,19 @@
+#!/bin/bash
+counter1=1
+n=`ls -l m-emad-27-12-2021 | grep -i m-emad | wc -l`
+if [ $n == 0 ]
+then
+	while [ $counter1 -le 25 ]
+	do
+		touch m-emad-27-12-2021/m-emad$counter1
+		((counter1++))
+	done
+else
+	counter2=$(($n + 1 ))
+	end=$(( $n + 25 ))
+	while [ $counter2 -le $end ]
+	do
+		touch m-emad-27-12-2021/m-emad$counter2
+		((counter2++))
+	done
+fi

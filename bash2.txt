@@ -1,0 +1,18 @@
+#!/bin/bash
+counter=1
+numfiles=`ls myfiles | wc -l`
+if [ $numfiles == 0 ]
+then
+        for i in {1..25}
+        do
+                touch myfiles/wesam$i
+        done
+else
+
+        for (( j=$numfiles+1; j<=$numfiles+25; j++ ))
+        do
+
+                touch myfiles/wesam$j
+
+        done
+fi

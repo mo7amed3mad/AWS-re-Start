@@ -1,0 +1,9 @@
+#!/bin/bash
+x=1
+numfile=`ls `
+while [ $x -le 25 ]
+do
+  touch /home/ec2-user/emad-27-12-2021/emad$x
+  x=$(( $x + 1 ))
+done
+ echo "25 files created sucsess"
